@@ -3,7 +3,7 @@ require 'transaction'
 describe 'Transaction' do
   let(:subject) { Transaction.new(100, 100) }
 
-  describe 'to_string' do
+  describe '#to_string' do
     it 'should respond to the to_string method' do
       expect(subject).to respond_to(:to_string)
     end
