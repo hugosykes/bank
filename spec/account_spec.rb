@@ -40,4 +40,10 @@ describe 'Account' do
       )
     end
   end
+
+  describe 'log' do
+    it 'should have an empty log upon initialization' do
+      expect(subject.log).to eq []
+    end
+  end
 end

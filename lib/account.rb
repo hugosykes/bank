@@ -1,8 +1,9 @@
 class Account
-  attr_reader :balance
+  attr_reader :balance, :log
 
   def initialize
     @balance = 0
+    @log = []
   end
 
   def deposit(amount)
