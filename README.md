@@ -5,7 +5,7 @@ https://github.com/makersacademy/course/blob/master/individual_challenges/bank_t
 
 ### Nouns and verbs analysis of the account:
 
-Nouns: balance and log
+Nouns: balance and statement
 Verbs: deposit, withdraw and display
 
 #### Deposit
@@ -30,3 +30,13 @@ Verb: to_string - want each transaction object to take care of turning itself in
 to_string method interpolates values for the time of transaction, the credit/debit (depending on whether it's a deposit or withdrawal) and the balance
 
 It uses a private method for creating the credit/debit string based on whether the instance variable is nil or not
+
+### Nouns and verbs analysis on the statement
+
+Noun: transactions
+Verbs: add transactions and display transactions
+
+
+## To run code
+
+Run `bundle` and open `irb` simply, to run the code.
