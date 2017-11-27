@@ -41,19 +41,6 @@ describe 'Account' do
     end
   end
 
-  describe 'log' do
-    it 'should have an empty log upon initialization' do
-      expect(subject.log).to eq []
-    end
-
-    context 'one transaction has been added' do
-      it 'should have one transaction in the log' do
-        subject.deposit(100)
-        expect(subject.log.length).to eq 1
-      end
-    end
-  end
-
   describe '#print_statement' do
     it 'should respond to print_statement method' do
       expect(subject).to respond_to :print_statement
