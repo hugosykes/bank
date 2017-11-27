@@ -69,8 +69,16 @@
         2,
         null,
         null
+      ],
+      "/Users/hugosykes/Makers/week10/bank/spec/transaction_spec.rb": [
+        1
+      ],
+      "/Users/hugosykes/Makers/week10/bank/lib/transaction.rb": [
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1511791846
+    "timestamp": 1511791947
   }
 }
