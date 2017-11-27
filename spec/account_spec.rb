@@ -3,13 +3,13 @@ require 'account'
 describe 'Account' do
   let(:subject) { Account.new }
 
-  describe '#balance' do
+  describe 'balance' do
     it 'should have a balance of 0' do
       expect(subject.balance).to eq 0
     end
   end
 
-  describe 'deposit' do
+  describe '#deposit' do
     it 'should respond to deposit method' do
       expect(subject).to respond_to(:deposit)
     end
@@ -25,7 +25,7 @@ describe 'Account' do
     end
   end
 
-  describe 'withdraw' do
+  describe '#withdraw' do
     it 'should respond to the withdraw method' do
       expect(subject).to respond_to(:withdraw)
     end
@@ -44,6 +44,35 @@ describe 'Account' do
   describe 'log' do
     it 'should have an empty log upon initialization' do
       expect(subject.log).to eq []
+    end
+
+    context 'one transaction has been added' do
+      it 'should have one transaction in the log' do
+        subject.deposit(100)
+        expect(subject.log.length).to eq 1
+      end
+    end
+  end
+
+  describe '#print_statement' do
+    it 'should respond to print_statement method' do
+      expect(subject).to respond_to :print_statement
+    end
+
+    it 'should print out the top row to explain structure' do
+      expect { subject.print_statement }.to output(/date || credit || debit || balance/).to_stdout
+    end
+
+    context 'should print statement after various transactions' do
+      it 'should print given statement after deposit' do
+        subject.deposit(100)
+        expect { subject.print_statement }.to output(/27\/11\/2017 || £100.00 || || £100.00/).to_stdout
+      end
+
+      it 'should print given statement after withdrawal' do
+        subject.withdraw(100)
+        expect { subject.print_statement }.to output(/27\/11\/2017 || || £100.00 || £100.00/).to_stdout
+      end
     end
   end
 end
