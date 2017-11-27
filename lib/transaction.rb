@@ -1,11 +1,12 @@
 class Transaction
   def initialize(amount, balance)
-    amount >= 0 ? (@credit = amount) : (@debit = amount)
+    amount >= 0 ? (@credit = amount) : (@debit = -amount)
     @balance = balance
+    @time = Time.now.strftime('%d/%m/%Y')
   end
 
   def to_string
-    "#{Time.now.strftime('%d/%m/%Y')} || #{amount_string(@credit)}|| #{amount_string(@debit)}|| £#{format('%.2f', @balance)}"
+    "#{@time} || #{amount_string(@credit)}|| #{amount_string(@debit)}|| £#{format('%.2f', @balance)}"
   end
 
   private

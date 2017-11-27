@@ -8,8 +8,13 @@ describe 'Transaction' do
       expect(subject).to respond_to(:to_string)
     end
 
-    it 'should return a row in a bank statement' do
+    it 'should return a row in a bank statement after deposit' do
       expect(subject.to_string).to eq '27/11/2017 || £100.00 || || £100.00'
+    end
+
+    it 'should return a row in a bank statement after withdrawal' do
+      subject = Transaction.new(-100, 0)
+      expect(subject.to_string).to eq '27/11/2017 || || £100.00 || £0.00'
     end
   end
 end

@@ -85,27 +85,33 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/hugosykes/Makers/week10/bank/lib/transaction.rb": [
         1,
         1,
-        2,
-        2,
+        3,
+        3,
+        3,
         null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
         null,
         1,
         2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
         null,
         null
       ]
     },
-    "timestamp": 1511794845
+    "timestamp": 1511795218
   }
 }
