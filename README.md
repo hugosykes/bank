@@ -24,3 +24,9 @@ It also raises an error if the amount is negative.
 
 Nouns: credit, debit and balance (Time to be evaluated at the point of initialization
 Verb: to_string - want each transaction object to take care of turning itself into a string
+
+#### To string
+
+to_string method interpolates values for the time of transaction, the credit/debit (depending on whether it's a deposit or withdrawal) and the balance
+
+It uses a private method for creating the credit/debit string based on whether the instance variable is nil or not
