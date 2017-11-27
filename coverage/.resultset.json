@@ -1,7 +1,31 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/hugosykes/Makers/week10/bank/spec/account_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/hugosykes/Makers/week10/bank/lib/account.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ]
     },
-    "timestamp": 1511782217
+    "timestamp": 1511784197
   }
 }
