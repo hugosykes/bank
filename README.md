@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hugosykes/bank.svg?branch=master)](https://travis-ci.org/hugosykes/bank)
+
 # Bank Tech Test
 https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
